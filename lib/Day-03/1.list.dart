@@ -20,12 +20,18 @@ void main(){
   listOfStudentName.addAll(['salam','nizam']);//add multiple item
   listOfStudentName.addAll(names);//add multiple item from another list
   print(listOfStudentName);
+
+
   listOfStudentName.remove("jamal");//remove item
+  print(listOfStudentName);
+  listOfStudentName.removeAt(0);//remove item at specific index
   print(listOfStudentName);
 
   names.insert(0,'bi');//insert item at specific index
   print(names);
   names.insertAll(1, ['salam','nizam']);//insert multiple item at specific index
+  print(names);
+  names[0]='masum';//update item
   print(names);
 
 }
