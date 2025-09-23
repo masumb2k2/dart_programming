@@ -33,4 +33,16 @@ void main(){
   double a=(firstNumber+secondNumber).toDouble();
   print(a);
 
+//type conversion from String to double
+  String random='34.56';
+  print(random.runtimeType);
+  double meturn=double.parse(random);
+  print(meturn);
+  print(meturn.runtimeType);
+
+
+  String f=meturn.toString(); //string conversion
+  print(f.runtimeType);
+
+
 }
