@@ -23,8 +23,8 @@ void main(){
   print(a!=b); //not equal to
 
 //logical operator
-  print(a<30 && b>30);
-  print(a<30 || b>30);
+  print(a<30 && b>30); //true && true = true, 
+  print(a<30 || b>30);//true || false = true
 
 //assignment operator
   a *=45; // a=a*45
