@@ -1,48 +1,66 @@
 void main(){
-    //classname objectname=class-constructor;
-  Person userOne= Person(name: 'mm',address: 'dhaka',university: 'du');//object
-  // userOne.name='jahid';
-  // userOne.address='dhaka';
-  // userOne.university='AIUB';
-  userOne.updateUserName('jahid');
-  print("name: ${userOne.name}");
+  
+  Person user1=Person(name: 'Mohu',address: 'mgu',university: 'EUB');//object
+  // user1.name='Masum Billah';
+  // user1.address='Dhaka';
+  // user1.university='BAUET';
+
+  print(user1.getPersonAddress());
+
+  user1.updateUserName('Swarna');
+  print(user1.name);
+
+  print(user1.university);
+
+  Person rahim=Person(name: 'Rahim',address: 'cml',university: 'cuet',age: 10);
+  print(rahim.getPersonAddress());
+
+  //class-name objectName=class-constructor
+  mathOperation mathoperation=mathOperation();
+
+
 
 }
 
-int add(int a,int b){
-  return a+b;
-}
+//class- custom user defined data type
+//object- instance of a class
 
-int subtract(int a,int b){
-  return a-b;
-}
-
-String getUserAddress(){
-  return "mirpur 10";
-}
 
 
 class Person{
-  String name ='masum';
+  String name='Masum';
   String address='';
-  String university='';
+  late String university; //no current value i will add later 
 
-  // Person(String n,String a,String u){
-  //   name=n;
-  //   address=a;
-  //   university=u;
-  // }
 
-  // Person(this.name,this.address,this.university); //constructor=same name as class name
-  Person({required this.name,required this.address,required this.university}); //constructor with optional parameter
+  int age;
 
+
+  Person({required this.name, required this.address, required this.university, this.age=3});//constructor
   //method
-  String getUserAddress(){
+  String getPersonAddress(){
     return address;
   }
-
   void updateUserName(String userName){
     name=userName;
   }
- 
+  
+  void updateUniversity(String university){
+    this.university=university;
+  }
+}
+
+class mathOperation{
+  mathOperation(){
+    print("This is constructor");
+  }
+
+  int add(int a, int b){
+    return a+b;
+  }
+
+  int subtract(int a, int b){
+    return a-b;
+  }
+
 }
